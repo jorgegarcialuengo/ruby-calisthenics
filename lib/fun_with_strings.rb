@@ -27,10 +27,11 @@ module FunWithStrings
 		}
 
 	return @local_hash
-
   end
   def anagram_groups 
     # your code here
+	@anagrams = self.split.group_by {|x| x.downcase.chars.sort}.values
+
   end
 end
 
